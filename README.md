@@ -31,12 +31,6 @@ Open `http://localhost:3002`; API docs are at `http://localhost:8010/docs`. The 
 
 No login is required. The application automatically uses the seeded demo identity `user / userdummy07@gmail.com` so the evaluation can focus on meeting workflows.
 
-## Architecture and schema
-
-`meetings` stores the unique public meeting identifier, metadata, schedule, duration, lifecycle status, and timestamps. `participants` has a many-to-one relationship to meetings and stores display name, host/mute state, and join/leave timestamps. This keeps attendance history and host actions normalized. Foreign keys and indexes cover meeting lookup and participant queries.
-
-The frontend API layer is isolated in `lib/api.ts`; dashboard, modal, and meeting-room concerns are separated into routes/components. FastAPI separates persistence models, validation schemas, database setup, and HTTP routes.
-
 ## Real-time architecture
 
 Each meeting uses a FastAPI WebSocket room for peer discovery and relaying WebRTC offers, answers, and ICE candidates. Media travels directly between participants rather than through the API server. Chat, participant joins/leaves, host mute-all, and meeting-end events use the same live channel. Screen sharing replaces the outgoing WebRTC video track for every connected peer. Recordings are created as WebM files in the browser, uploaded to `backend/recordings`, and indexed in SQLite for the demo user.
@@ -52,4 +46,4 @@ The included public Google STUN servers support common networks. A production de
 
 ## Deploy
 
-Deploy the Next.js root to Vercel. Deploy `backend` to Render/Railway with `uvicorn backend.main:app --host 0.0.0.0 --port $PORT`, using a persistent disk for SQLite.
+Deploy the Next.js root to Vercel. Deploy `backend` to Render/Railway with `uvicorn backend.main:app --host 0.0.0.0 --port $PORT`.
