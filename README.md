@@ -39,7 +39,7 @@ The included public Google STUN servers support common networks. A production de
 
 ## Assumptions
 
-- A default user, Alex Morgan, is signed in as requested.
+- A default user is signed in as requested.
 - Camera/microphone access needs localhost or HTTPS and browser permission.
 - The product workflow and local media preview are complete. Production multi-party media transport would additionally use WebRTC signaling and an SFU such as LiveKit or mediasoup, which is outside the assignment's specified stack.
 - Set `NEXT_PUBLIC_API_URL` for deployment. Update FastAPI CORS and the invite host for the production domains.
