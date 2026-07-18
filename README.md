@@ -14,8 +14,6 @@ A full-stack Zoom-inspired meeting platform for the SDE assignment. It includes 
 
 ## Run locally
 
-Requires Node.js 18+ and Python 3.10+.
-
 ```bash
 # Terminal 1 — API
 python -m venv .venv
