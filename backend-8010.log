@@ -1,0 +1,5 @@
+INFO:     127.0.0.1:55404 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56554 - "OPTIONS /api/meetings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57552 - "OPTIONS /api/meetings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57552 - "GET /api/meetings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56554 - "GET /api/meetings HTTP/1.1" 200 OK

@@ -1,0 +1,9 @@
+node_modules/
+.next/
+__pycache__/
+*.pyc
+.venv/
+backend/zoom_clone.db
+.env*
+!.env.example
+
