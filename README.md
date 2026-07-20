@@ -1,4 +1,5 @@
 # Zooma — Video Conferencing Platform
+(Zooma sometimes takes time to open due to inactivity in render)
 
 A full-stack Zoom-inspired meeting platform for the SDE assignment. It includes a polished responsive dashboard, instant and scheduled meetings, join validation, browser camera/microphone controls, participant and chat panels, shareable invites, and host controls.
 
